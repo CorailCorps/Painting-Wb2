@@ -1,0 +1,114 @@
+---
+const { t, lang } = Astro.props;
+---
+
+<section id="legitimacy" class="py-20 md:py-32 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center max-w-3xl mx-auto mb-16">
+			<div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-6">
+				<svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+					<path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+				</svg>
+				<span class="text-sm font-semibold text-primary-700">{lang === 'fr' ? 'Pilier 1' : 'Pillar 1'}: DemonstrateLegitimacy</span>
+			</div>
+			<h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+				{t.legitimacy.title}
+			</h2>
+			<p class="text-xl text-neutral-600 leading-relaxed">
+				{t.legitimacy.subtitle}
+			</p>
+		</div>
+
+		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+			<div class="group relative bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+				<div class="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+				<div class="relative">
+					<div class="w-16 h-16 rounded-xl bg-primary-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+						</svg>
+					</div>
+					<h3 class="font-display text-xl font-semibold text-neutral-900 mb-2">{t.legitimacy.rbq}</h3>
+					<p class="text-neutral-600 text-sm mb-4">{lang === 'fr' ? 'Régie du bâtiment du Québec' : 'Régie du bâtiment du Québec'}</p>
+					<div class="text-xs text-neutral-500 font-mono bg-neutral-100 rounded px-3 py-2 inline-block">
+						[{lang === 'fr' ? 'Numéro à ajouter' : 'Number to be added'}]
+					</div>
+				</div>
+			</div>
+
+			<div class="group relative bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+				<div class="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+				<div class="relative">
+					<div class="w-16 h-16 rounded-xl bg-primary-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+						</svg>
+					</div>
+					<h3 class="font-display text-xl font-semibold text-neutral-900 mb-2">{t.legitimacy.neq}</h3>
+					<p class="text-neutral-600 text-sm mb-4">{lang === 'fr' ? 'Registraire des entreprises du Québec' : 'Quebec Enterprise Registrar'}</p>
+					<div class="text-xs text-neutral-500 font-mono bg-neutral-100 rounded px-3 py-2 inline-block">
+						[{lang === 'fr' ? 'NEQ à ajouter' : 'NEQ to be added'}]
+					</div>
+				</div>
+			</div>
+
+			<div class="group relative bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+				<div class="absolute top-0 right-0 w-32 h-32 bg-accent-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+				<div class="relative">
+					<div class="w-16 h-16 rounded-xl bg-accent-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+						<svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+						</svg>
+					</div>
+					<h3 class="font-display text-xl font-semibold text-neutral-900 mb-2">{t.legitimacy.apchq}</h3>
+					<p class="text-neutral-600 text-sm mb-4">APCHQ</p>
+					<div class="inline-flex items-center text-xs text-accent-700 font-semibold">
+						<svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						{lang === 'fr' ? 'Membre actif' : 'Active member'}
+					</div>
+				</div>
+			</div>
+
+			<div class="group relative bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+				<div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+				<div class="relative">
+					<div class="w-16 h-16 rounded-xl bg-green-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+						</svg>
+					</div>
+					<h3 class="font-display text-xl font-semibold text-neutral-900 mb-2">{t.legitimacy.insurance}</h3>
+					<p class="text-neutral-600 text-sm mb-4">{lang === 'fr' ? '2M$ de couverture' : '$2M coverage'}</p>
+					<div class="inline-flex items-center text-xs text-green-700 font-semibold">
+						<svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						{lang === 'fr' ? 'Valide' : 'Valid'} 2025-2026
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-primary-50 to-white rounded-3xl p-8 md:p-12 border border-primary-100">
+			<div class="max-w-3xl mx-auto text-center">
+				<h3 class="font-display text-2xl font-semibold text-neutral-900 mb-4">
+					{lang === 'fr' ? 'Vérifiez nos documents officiels' : 'Verify our official documents'}
+				</h3>
+				<p class="text-neutral-600 mb-8">
+					{lang === 'fr'
+						? 'Tous nos permis et assurances sont disponibles pour consultation. Nous n\'avons rien à cacher.'
+						: 'All our licences and insurance documents are available for review. We have nothing to hide.'}
+				</p>
+				<a href={`${lang === 'en' ? '/en' : ''}#quote`}
+				   class="inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-primary-500/30 hover:-translate-y-0.5">
+					<svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+					</svg>
+					<span>{t.legitimacy.cta}</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

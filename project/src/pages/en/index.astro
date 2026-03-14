@@ -1,0 +1,24 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Legitimacy from '../../components/Legitimacy.astro';
+import NeighbourhoodMap from '../../components/NeighbourhoodMap.astro';
+import Craft from '../../components/Craft.astro';
+import Transparency from '../../components/Transparency.astro';
+import SocialProof from '../../components/SocialProof.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import { useTranslations } from '../../i18n/translations';
+
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<MainLayout title="Residential Painting in Montreal | RBQ • NEQ • APCHQ" description={t.hero.description}>
+	<Hero t={t} lang={lang} />
+	<Legitimacy t={t} lang={lang} />
+	<NeighbourhoodMap t={t} lang={lang} />
+	<Craft t={t} lang={lang} />
+	<Transparency t={t} lang={lang} />
+	<SocialProof t={t} lang={lang} />
+	<QuoteForm t={t} lang={lang} />
+</MainLayout>

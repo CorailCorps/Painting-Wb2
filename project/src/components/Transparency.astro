@@ -1,0 +1,177 @@
+---
+const { t, lang } = Astro.props;
+---
+
+<section id="process" class="py-20 md:py-32 bg-gradient-to-b from-neutral-50 to-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center max-w-3xl mx-auto mb-16">
+			<div class="inline-flex items-center space-x-2 px-4 py-2 bg-accent-50 rounded-full mb-6">
+				<svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+					<path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+				</svg>
+				<span class="text-sm font-semibold text-accent-700">{lang === 'fr' ? 'Pilier 3' : 'Pillar 3'}: EnsureTransparency</span>
+			</div>
+			<h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+				{t.transparency.title}
+			</h2>
+			<p class="text-xl text-neutral-600 leading-relaxed">
+				{t.transparency.subtitle}
+			</p>
+		</div>
+
+		<div class="grid lg:grid-cols-2 gap-12 items-start mb-16">
+			<div class="lg:sticky lg:top-24">
+				<div class="bg-white rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden">
+					<div class="bg-gradient-to-br from-primary-600 to-primary-700 p-6 text-white">
+						<div class="flex items-center justify-between mb-4">
+							<h3 class="font-display text-2xl font-bold">{lang === 'fr' ? 'Exemple de soumission' : 'Quote example'}</h3>
+							<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-sm font-semibold">
+								{lang === 'fr' ? 'Détaillée' : 'Detailed'}
+							</span>
+						</div>
+						<p class="text-primary-100 text-sm">
+							{lang === 'fr' ? 'Voici à quoi ressemble notre soumission standard' : 'This is what our standard quote looks like'}
+						</p>
+					</div>
+
+					<div class="p-6 space-y-4">
+						<div class="flex items-center justify-between py-3 border-b border-neutral-200">
+							<span class="text-neutral-700">{lang === 'fr' ? 'Préparation des surfaces' : 'Surface preparation'}</span>
+							<span class="font-semibold text-neutral-900">$XXX</span>
+						</div>
+						<div class="flex items-center justify-between py-3 border-b border-neutral-200">
+							<span class="text-neutral-700">{lang === 'fr' ? 'Apprêt (1 couche)' : 'Primer (1 coat)'}</span>
+							<span class="font-semibold text-neutral-900">$XXX</span>
+						</div>
+						<div class="flex items-center justify-between py-3 border-b border-neutral-200">
+							<span class="text-neutral-700">{lang === 'fr' ? 'Peinture (2 couches)' : 'Paint (2 coats)'}</span>
+							<span class="font-semibold text-neutral-900">$XXX</span>
+						</div>
+						<div class="flex items-center justify-between py-3 border-b border-neutral-200">
+							<span class="text-neutral-700">{lang === 'fr' ? 'Protection & nettoyage' : 'Protection & cleanup'}</span>
+							<span class="font-semibold text-neutral-900">{lang === 'fr' ? 'Inclus' : 'Included'}</span>
+						</div>
+						<div class="flex items-center justify-between py-3 border-b border-neutral-200">
+							<span class="text-neutral-700">{lang === 'fr' ? 'Main d\'œuvre' : 'Labor'}</span>
+							<span class="font-semibold text-neutral-900">$XXX</span>
+						</div>
+						<div class="flex items-center justify-between pt-4 text-lg font-bold">
+							<span class="text-neutral-900">{lang === 'fr' ? 'Total' : 'Total'}</span>
+							<span class="text-primary-600">$X,XXX</span>
+						</div>
+					</div>
+
+					<div class="bg-neutral-50 p-6 border-t border-neutral-200">
+						<div class="flex items-start space-x-3">
+							<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+							</svg>
+							<p class="text-sm text-neutral-600 leading-relaxed">
+								{lang === 'fr'
+									? 'Les prix réels varient selon la superficie et l\'état des surfaces. Cette soumission détaillée vous sera fournie après une évaluation sur place.'
+									: 'Actual prices vary by area and surface condition. This detailed quote will be provided after an on-site assessment.'}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="space-y-6">
+				<div>
+					<h3 class="font-display text-2xl font-bold text-neutral-900 mb-6">{t.transparency.included}</h3>
+					<div class="space-y-4">
+						<div class="flex items-start space-x-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-primary-200 hover:shadow-lg transition-all">
+							<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+								<svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-semibold text-neutral-900 mb-1">{t.transparency.checklist.prep}</h4>
+								<p class="text-sm text-neutral-600">{lang === 'fr' ? 'Masquage, ponçage, rebouchage et apprêt inclus' : 'Masking, sanding, filling, and primer included'}</p>
+							</div>
+						</div>
+
+						<div class="flex items-start space-x-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-primary-200 hover:shadow-lg transition-all">
+							<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+								<svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-semibold text-neutral-900 mb-1">{t.transparency.checklist.protection}</h4>
+								<p class="text-sm text-neutral-600">{lang === 'fr' ? 'Toiles de protection, plastique, et bâches pour tout protéger' : 'Drop cloths, plastic, and tarps to protect everything'}</p>
+							</div>
+						</div>
+
+						<div class="flex items-start space-x-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-primary-200 hover:shadow-lg transition-all">
+							<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+								<svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-semibold text-neutral-900 mb-1">{t.transparency.checklist.coats}</h4>
+								<p class="text-sm text-neutral-600">{lang === 'fr' ? 'Produits Sherwin-Williams premium pour une finition durable' : 'Premium Sherwin-Williams products for lasting finish'}</p>
+							</div>
+						</div>
+
+						<div class="flex items-start space-x-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-primary-200 hover:shadow-lg transition-all">
+							<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+								<svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-semibold text-neutral-900 mb-1">{t.transparency.checklist.cleanup}</h4>
+								<p class="text-sm text-neutral-600">{lang === 'fr' ? 'Nettoyage complet et inspection finale avec vous' : 'Complete cleanup and final walkthrough with you'}</p>
+							</div>
+						</div>
+
+						<div class="flex items-start space-x-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-primary-200 hover:shadow-lg transition-all">
+							<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+								<svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-semibold text-neutral-900 mb-1">{t.transparency.checklist.warranty}</h4>
+								<p class="text-sm text-neutral-600">{lang === 'fr' ? 'Garantie de satisfaction et retouches si nécessaire' : 'Satisfaction guarantee and touch-ups if needed'}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-gradient-to-br from-accent-50 to-white rounded-2xl p-8 border border-accent-100">
+					<div class="flex items-start space-x-4">
+						<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center">
+							<svg class="w-6 h-6 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+							</svg>
+						</div>
+						<div>
+							<h4 class="font-display text-lg font-semibold text-neutral-900 mb-2">
+								{lang === 'fr' ? 'Calendrier de projet clair' : 'Clear project timeline'}
+							</h4>
+							<p class="text-neutral-600 text-sm leading-relaxed">
+								{lang === 'fr'
+									? 'Nous vous indiquons les dates de début et de fin prévues. Pas de surprises, pas de retards injustifiés.'
+									: 'We provide start and expected completion dates. No surprises, no unjustified delays.'}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<a href={`${lang === 'en' ? '/en' : ''}#quote`}
+			   class="inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-primary-500/30 hover:-translate-y-0.5">
+				<span>{t.transparency.cta}</span>
+				<svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,113 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/translations';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { title = 'Peinture Montréal', description = t.hero.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+	</head>
+	<body class="antialiased text-neutral-800 bg-white">
+		<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 transition-all duration-300">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex items-center justify-between h-16 md:h-20">
+					<a href={lang === 'en' ? '/en' : '/'} class="flex items-center space-x-2 group">
+						<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center transition-transform group-hover:scale-105">
+							<span class="text-white font-bold text-lg">P</span>
+						</div>
+						<span class="font-display font-semibold text-lg text-neutral-900 hidden sm:block">PeintureMTL</span>
+					</a>
+
+					<div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+						<a href={`${lang === 'en' ? '/en' : ''}#legitimacy`} class="px-3 lg:px-4 py-2 text-sm font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">{t.nav.legitimacy}</a>
+						<a href={`${lang === 'en' ? '/en' : ''}#projects`} class="px-3 lg:px-4 py-2 text-sm font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">{t.nav.projects}</a>
+						<a href={`${lang === 'en' ? '/en' : ''}#process`} class="px-3 lg:px-4 py-2 text-sm font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">{t.nav.process}</a>
+						<a href={`${lang === 'en' ? '/en' : ''}#testimonials`} class="px-3 lg:px-4 py-2 text-sm font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">{t.nav.testimonials}</a>
+					</div>
+
+					<div class="flex items-center space-x-3">
+						<div class="flex items-center border border-neutral-200 rounded-lg overflow-hidden">
+							<a href="/" class={`px-3 py-1.5 text-sm font-medium transition-colors ${lang === 'fr' ? 'bg-primary-500 text-white' : 'text-neutral-600 hover:bg-neutral-100'}`}>FR</a>
+							<a href="/en" class={`px-3 py-1.5 text-sm font-medium transition-colors ${lang === 'en' ? 'bg-primary-500 text-white' : 'text-neutral-600 hover:bg-neutral-100'}`}>EN</a>
+						</div>
+						<a href={`${lang === 'en' ? '/en' : ''}#quote`} class="hidden sm:inline-flex items-center px-5 py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all hover:shadow-lg hover:shadow-primary-500/30 hover:-translate-y-0.5">
+							{t.nav.quote}
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<main class="pt-16 md:pt-20">
+			<slot />
+		</main>
+
+		<footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+					<div>
+						<div class="flex items-center space-x-2 mb-4">
+							<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+								<span class="text-white font-bold text-lg">P</span>
+							</div>
+							<span class="font-display font-semibold text-lg text-white">PeintureMTL</span>
+						</div>
+						<p class="text-neutral-400 text-sm leading-relaxed">{t.footer.tagline}</p>
+					</div>
+
+					<div>
+						<h3 class="text-white font-semibold mb-4">{t.footer.contact}</h3>
+						<div class="space-y-2 text-sm">
+							<p>514-XXX-XXXX</p>
+							<p>info@peinturemtl.ca</p>
+							<p class="text-neutral-400">Montréal, QC</p>
+						</div>
+					</div>
+
+					<div>
+						<h3 class="text-white font-semibold mb-4">{t.footer.legal}</h3>
+						<div class="space-y-2 text-sm">
+							<p>RBQ: [À ajouter]</p>
+							<p>NEQ: [À ajouter]</p>
+							<p class="text-neutral-400">APCHQ</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
+					<p>&copy; {new Date().getFullYear()} PeintureMTL. {t.footer.copyright}</p>
+					<div class="flex items-center space-x-6 mt-4 md:mt-0">
+						<a href={`${lang === 'en' ? '/en' : ''}#legitimacy`} class="hover:text-primary-400 transition-colors">{t.footer.legal}</a>
+						<a href={`${lang === 'en' ? '/en' : ''}#quote`} class="hover:text-primary-400 transition-colors">{t.footer.contact}</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Inter', sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Sora', 'Inter', sans-serif;
+	}
+</style>
